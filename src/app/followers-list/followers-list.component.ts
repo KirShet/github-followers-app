@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-followers-list',
-  standalone: true,
-  imports: [],
-  templateUrl: './followers-list.component.html',
-  styleUrl: './followers-list.component.css'
+  templateUrl: './followers-list.component.html'
 })
 export class FollowersListComponent {
-
+  @Input() followers: any[] = [];
 }
