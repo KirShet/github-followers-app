@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
+import { GithubService } from '../github.service';
 
 @Component({
   selector: 'app-user-input',
-  standalone: true,
-  imports: [],
-  templateUrl: './user-input.component.html',
-  styleUrl: './user-input.component.css'
+  templateUrl: './user-input.component.html'
 })
 export class UserInputComponent {
+  userName: string = '';
 
+  constructor(private githubService: GithubService) {}
+
+  getFollowers() {
+    this.githubService.getFollowers(this.userName)
+      .subscribe(followers => {
+        console.log(followers);
+      });
+  }
 }
