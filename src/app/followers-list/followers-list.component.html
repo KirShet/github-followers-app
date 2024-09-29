@@ -1,8 +1,9 @@
-<div *ngIf="followers.length > 0">
-  <ul>
-    <li *ngFor="let follower of followers">
-      <img [src]="follower.avatar_url" alt="Avatar" width="50">
-      <a [href]="follower.html_url" target="_blank">{{ follower.login }}</a>
-    </li>
-  </ul>
+<div class="repeater" *ngIf="followers.length > 0">
+  <div class="container-style" *ngFor="let follower of followers">
+    <div class="container-layout">
+      <img class="image-contain" alt="" [src]="follower.avatar_url">
+      <h5 class="log-text-default">{{ follower.login }}</h5>
+      <a [href]="follower.html_url" class="active-none">{{ follower.html_url }}</a>
+  </div>
+</div>
 </div>
