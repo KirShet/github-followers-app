@@ -1,3 +1,43 @@
+<style>
+  .image-contain{
+      width: 62px;
+      height: 62px;
+      margin: 0 auto 0 3px;
+      border-radius: 50% !important;
+      object-fit: contain;
+      background-size: contain;
+      position: relative;
+      display: block;
+  }
+  .container-layout{
+    padding: 9px 5px 9px 7px;
+      position: relative;
+  }
+  .log-text-default{
+    margin: -62px auto 0 81px;
+    word-wrap: break-word;
+    position: relative;
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+  .active-none{
+      font-size: 0.75rem;
+      margin: 3px auto 0 81px;
+      color: #478ac9 !important;
+      text-decoration: none;
+  }
+  .repeater{
+    grid-gap: 15px 10px;
+    grid-auto-columns: 100%;
+    grid-template-columns: 100%;
+    min-height: 297px;
+    display: grid;
+  }
+  .container-style{
+    display: flex;
+    position: relative;
+  }
+  </style>
 <div class="repeater" *ngIf="followers.length > 0">
   <div class="container-style" *ngFor="let follower of followers">
     <div class="container-layout">
