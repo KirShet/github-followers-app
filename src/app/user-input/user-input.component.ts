@@ -8,7 +8,7 @@ import { GithubService } from '../github.service';
 export class UserInputComponent {
   userName: string = '';
 
-  // Создаем событие для передачи списка фолловеров
+  //событие для передачи списка фолловеров
   @Output() followersLoaded = new EventEmitter<any[]>();
 
   constructor(private githubService: GithubService) {}
@@ -22,4 +22,3 @@ export class UserInputComponent {
       });
   }
 }
-
